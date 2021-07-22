@@ -13,11 +13,11 @@ export default class FilterString extends Component {
     };
   };
 
-  handleChange(val) {
-    this.setState({ userInput: val });
+  handleChange(value) {
+    this.setState({userInput: value});
   };
 
-  filterEmployees(userInput) {
+  filterString(userInput) {
     let strings = this.state.strings;
     let filteredStrings = [];
 
@@ -36,7 +36,7 @@ export default class FilterString extends Component {
         <h4> Filter String </h4>
         <span className="puzzleText">Unfiltered: {JSON.stringify(this.state.strings, null, 10)}</span>
         <input className="inputLine" onChange={(e) => this.handleChange(e.target.value)}/>
-        <button className="confirmationButton" onClick={() => this.filterEmployees(this.state.userInput)}>Run Filter</button>
+        <button className="confirmationButton" onClick={() => this.filterString(this.state.userInput)}>Run Filter</button>
         <span className="resultsBox filterStringRB">Filtered: {JSON.stringify(this.state.filteredStrings, null, 10)}</span>
       </div>
     )

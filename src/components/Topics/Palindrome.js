@@ -11,8 +11,8 @@ export default class Palindrome extends Component {
     };
   };
 
-  handleChange(val) {
-    this.setState({ userInput: val });
+  handleChange(value) {
+    this.setState({userInput: value});
   };
 
   filterEmployees(userInput) {

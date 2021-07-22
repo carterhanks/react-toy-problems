@@ -19,8 +19,7 @@ export default class FilterObject extends Component {
         },
         {
           make: 'Chevrolet',
-          model: 'Silverado 2500 HD',
-          year: 2018
+          model: 'Silverado 2500 HD'
         }
       ],
 
@@ -29,11 +28,11 @@ export default class FilterObject extends Component {
     };
   };
 
-  handleChange(val) {
-    this.setState({ userInput: val });
+  handleChange(value) {
+    this.setState({userInput: value});
   };
 
-  filterEmployees(prop) {
+  filterCars(prop) {
     let cars = this.state.cars;
     let filteredCars = [];
 
@@ -52,7 +51,7 @@ export default class FilterObject extends Component {
         <h4> Filter Object </h4>
         <span className="puzzleText"> Unfiltered: {JSON.stringify(this.state.cars, null, 10)} </span>
         <input className="inputLine" onChange={(e) => this.handleChange(e.target.value)}/>
-        <button className="confirmationButton" onClick={() => this.filterEmployees(this.state.userInput)}> Run Filter </button>
+        <button className="confirmationButton" onClick={() => this.filterCars(this.state.userInput)}> Run Filter </button>
         <span className="resultsBox filterObjectRB"> Filtered: {JSON.stringify(this.state.filteredCars, null, 10)} </span>
       </div>
     )
