@@ -53,7 +53,7 @@ export default class EvenAndOdd extends React.Component {
 
 
 
-//functional based component:
+//functional based component: (old way of doing things)
 
 // function evenAndOdd() {
 //     //variables go here
